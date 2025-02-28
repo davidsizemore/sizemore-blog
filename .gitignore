@@ -1,0 +1,18 @@
+# Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler
+.bundle/
+vendor/
+
+# Logs
+*.log
+
+# Mac OS
+.DS_Store
+
+# Node.js
+node_modules/ 

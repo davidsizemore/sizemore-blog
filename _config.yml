@@ -1,0 +1,50 @@
+# Site settings
+title: David Sizemore's Blog
+description: >-
+  Welcome to my personal blog where I share thoughts, experiences, and insights.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://blog.davidsizemoredesign.com" # your domain
+author: David Sizemore
+
+# Build settings
+markdown: kramdown
+theme: minima
+port: 8000
+host: 0.0.0.0
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# Social links (optional)
+twitter_username: 
+github_username: 
+linkedin_username: 
+
+# Google Analytics (optional)
+google_analytics: 
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .github
+  - README.md
+  - LICENSE
+
+# Permalink style
+permalink: /:year/:month/:day/:title/
+
+# Pagination
+paginate: 10
+paginate_path: "/page:num/"
+
+# Collections (if you want to organize content in collections)
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:year/:month/:day/:title/ 
