@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Generative AI Is Just Digital Cocaine"
+date: 2024-03-21
+categories: blog
+---
+
+Using AI is like doing cocaine.
+
+If you're good at something, like attending parties, you're going to be REALLY good at it on cocaine. And if you're good at engineering, you're probably going to be able write code harder/better/faster/stronger using AI.
+
+If you're OK at something, like parties, you might actually be really, really good at it on cocaine. You might also knock over a bookshelf and act like a jerk to the host's new partner. But let me tell you, you're going to be a jerk with the utmost confidence.
+
+Which is the issue, because if you're terrible at something, like going to a party, you're going to be utterly insufferable at it on cocaine. But, because you're terrible and on cocaine, you're going to have the unearned confidence of someone who believes they're nailing it. 
+
+I think it's OK to use cocaine. And by cocaine, I mean AI. But I think you should be honest with yourself about where you're at on the skill spectrum, and use the tool to learn and get better. That's the right way to approach using a tool.
+
+Oh, and don't talk about AI at parties. Only people on cocaine want to hear about how much you love cocaine.
