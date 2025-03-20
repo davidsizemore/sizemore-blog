@@ -11,6 +11,11 @@ layout: default
             {% if page.author %}
                 • {{ page.author }}
             {% endif %}
+            {% if page.categories.size > 0 %}
+                {% for category in page.categories %}
+                <a href="{{ '/category/' | append: category | relative_url }}" class="post-category">{{ category }}</a>
+                {% endfor %}
+            {% endif %}
         </p>
     </header>
 

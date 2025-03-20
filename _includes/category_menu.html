@@ -1,0 +1,35 @@
+<!-- Category Menu -->
+<div class="category-menu">
+  <ul class="category-list">
+    <li class="category-item">
+      <a href="{{ '/' | relative_url }}" class="category-link {% if page.url == '/' %}active{% endif %}">All</a>
+    </li>
+    {% assign categories = site.categories | sort %}
+    {% assign all_categories = "writing,art,photos" | split: "," %}
+    
+    {% for cat in all_categories %}
+      {% assign found = false %}
+      {% for site_category in categories %}
+        {% if site_category[0] == cat %}
+          {% assign found = true %}
+          <li class="category-item">
+            <a href="{{ '/category/' | append: site_category[0] | relative_url }}" class="category-link {% if page.category == site_category[0] %}active{% endif %}">
+              {{ site_category[0] | capitalize }}
+              <span class="category-count">({{ site_category[1].size }})</span>
+            </a>
+          </li>
+          {% break %}
+        {% endif %}
+      {% endfor %}
+      
+      {% if found == false %}
+        <li class="category-item">
+          <a href="{{ '/category/' | append: cat | relative_url }}" class="category-link {% if page.category == cat %}active{% endif %}">
+            {{ cat | capitalize }}
+            <span class="category-count">(0)</span>
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div> 

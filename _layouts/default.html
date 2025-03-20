@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     <link rel="stylesheet" href="https://use.typekit.net/fcl4zng.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     {% feed_meta %}
     {% seo %}
 </head>
-<body>
+<body class="{% if layout.name == 'grid_category' or page.layout == 'grid_category' %}grid-category{% endif %}">
     <header class="site-header">
         <div class="wrapper">
             <a class="site-title" href="{{ '/' | relative_url }}">blog.davidsizemoredesign.com</a>
@@ -28,5 +30,10 @@
             <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }}. All rights reserved.</p>
         </div>
     </footer>
+    
+    <div class="filter-bar">
+            {% include category_menu.html %}
+        </div>
+    </div>
 </body>
 </html> 
