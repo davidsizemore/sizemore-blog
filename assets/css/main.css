@@ -60,7 +60,7 @@ p, ul {
 /* Header styles */
 .site-header {
     padding: 2rem 0;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     text-align: center;
 }
 
@@ -346,6 +346,18 @@ p, ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Feature image styles */
+.post-feature-image {
+    margin: 1.5rem 0;
+}
+
+.featured-image.full-width {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive design */

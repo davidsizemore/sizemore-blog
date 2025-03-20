@@ -12,12 +12,19 @@ layout: default
                 • {{ page.author }}
             {% endif %}
             {% if page.categories.size > 0 %}
+                • 
                 {% for category in page.categories %}
                 <a href="{{ '/category/' | append: category | relative_url }}" class="post-category">{{ category }}</a>
                 {% endfor %}
             {% endif %}
         </p>
     </header>
+
+    {% if page.feature_image %}
+    <div class="post-feature-image">
+        <img src="{{ page.feature_image | relative_url }}" alt="{{ page.title }}" class="featured-image full-width">
+    </div>
+    {% endif %}
 
     <div class="post-content">
         {{ content }}
