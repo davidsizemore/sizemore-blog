@@ -7,16 +7,18 @@ layout: default
   <article class="grid-post-preview">
     <a class="grid-post-link" href="{{ post.url | relative_url }}">
       <div class="grid-post-image">
-        {% if post.title == "Art Showcase" %}
-          <img src="/assets/images/art01-blog.jpg" alt="{{ post.title }}" class="featured-image">
+        {% if post.feature_image %}
+          <img src="{{ post.feature_image | relative_url }}" alt="{{ post.title }}" class="featured-image">
+        {% elsif post.title == "Art Showcase" %}
+          <img src="{{ '/assets/images/art01-blog.jpg' | relative_url }}" alt="{{ post.title }}" class="featured-image">
         {% elsif post.title == "Abstract Explorations" %}
-          <img src="/assets/images/art02-blog.jpg" alt="{{ post.title }}" class="featured-image">
+          <img src="{{ '/assets/images/art02-blog.jpg' | relative_url }}" alt="{{ post.title }}" class="featured-image">
         {% elsif post.title == "Sculptural Forms" %}
-          <img src="/assets/images/art03-blog.jpg" alt="{{ post.title }}" class="featured-image">
+          <img src="{{ '/assets/images/art03-blog.jpg' | relative_url }}" alt="{{ post.title }}" class="featured-image">
         {% elsif post.title == "Sample Image Post" %}
-          <img src="/assets/images/telephone.jpg" alt="{{ post.title }}" class="featured-image">
+          <img src="{{ '/assets/images/telephone.jpg' | relative_url }}" alt="{{ post.title }}" class="featured-image">
         {% else %}
-          <img src="/assets/images/pencil.jpg" alt="{{ post.title }}" class="featured-image">
+          <img src="{{ '/assets/images/pencil.jpg' | relative_url }}" alt="{{ post.title }}" class="featured-image">
         {% endif %}
       </div>
     </a>
