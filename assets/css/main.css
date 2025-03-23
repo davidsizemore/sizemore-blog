@@ -402,6 +402,15 @@ p, ul {
         font-size: 1.35rem; /* Increased from 1rem */
     }
     
+    /* Keep footer text small */
+    .site-footer {
+        font-size: 0.55rem !important;
+    }
+    
+    .site-footer p {
+        font-size: 0.75rem !important;
+    }
+    
     .post-preview h2 {
         font-size: 2rem; /* Increased from 1.5rem */
         margin-bottom: 0.5rem;
