@@ -1,0 +1,8 @@
+{% comment %}
+  Custom head tags to enhance social media sharing with featured images
+{% endcomment %}
+
+{% if page.feature_image %}
+  <meta property="og:image" content="{{ site.url }}{{ page.feature_image }}" />
+  <meta name="twitter:image" content="{{ site.url }}{{ page.feature_image }}" />
+{% endif %} 

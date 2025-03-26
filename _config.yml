@@ -22,6 +22,21 @@ twitter_username:
 github_username: 
 linkedin_username: 
 
+# Social media image settings - used by jekyll-seo-tag
+twitter:
+  username: # your Twitter handle if you have one (without the @)
+  card: summary_large_image # This tells Twitter to use large image cards
+
+# Default image for social media sharing
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/default-social.jpg # Create a default image for posts without feature_image
+
+# Open Graph settings
+logo: /assets/images/default-social.jpg # Same as default image, used for schema.org/Logo
+
 # Google Analytics (optional)
 google_analytics: 
 

@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     {% feed_meta %}
+    {% include custom-head.html %}
     {% seo %}
 </head>
 <body class="{% if layout.name == 'grid_category' or page.layout == 'grid_category' %}grid-category{% endif %}">
