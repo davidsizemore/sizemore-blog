@@ -3,6 +3,10 @@
 {% endcomment %}
 
 {% if page.feature_image %}
-  <meta property="og:image" content="{{ site.url }}{{ page.feature_image }}" />
-  <meta name="twitter:image" content="{{ site.url }}{{ page.feature_image }}" />
-{% endif %} 
+  <meta property="og:image" content="{{ site.url }}{{ page.feature_image }}?v={{ site.time | date: '%s' }}" />
+  <meta name="twitter:image" content="{{ site.url }}{{ page.feature_image }}?v={{ site.time | date: '%s' }}" />
+{% endif %}
+
+<!-- Force cache refresh for social media -->
+<meta property="og:description" content="{{ site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}?v={{ site.time | date: '%s' }}" />
+<meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}?v={{ site.time | date: '%s' }}" /> 

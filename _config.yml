@@ -1,7 +1,7 @@
 # Site settings
 title: David Sizemore's Blog
 description: >-
-  Welcome to my personal blog where I share thoughts, experiences, and insights.
+  Art, design, and writing
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.davidsizemoredesign.com" # your domain
 author: David Sizemore
