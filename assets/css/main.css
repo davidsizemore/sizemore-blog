@@ -80,7 +80,7 @@ p, ul {
 
 .post-preview {
     margin-bottom: 8rem;
-    text-align: center;
+    text-align: left;
     max-width: 100%;
 }
 
@@ -145,7 +145,8 @@ p, ul {
     font-style: normal;
     font-size: 0.55rem;
     text-transform: uppercase;
-    letter-spacing: 1px;}
+    letter-spacing: 1px;
+}
 
 /* Filter bar styles */
 .filter-bar {
@@ -458,4 +459,33 @@ p, ul {
     }
     
     /* Remove the post-category size increase */
+}
+
+/* Load more button styles */
+.load-more-container {
+    text-align: center;
+    margin: 2rem 0 6rem 0;
+}
+
+.load-more-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-family: "new-hero", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.load-more-button:hover {
+    background-color: #1a2a36; /* Darker shade of primary-color */
+}
+
+/* Additional post styles */
+.post-title {
+    margin-bottom: 0.1rem; /* Reduced margin to bring title closer to the date */
 } 
