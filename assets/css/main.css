@@ -1,10 +1,11 @@
 /* Base styles */
 :root {
-    --primary-color: #2c3e50;
+    --primary-color: #013648;
     --secondary-color: #3498db;
-    --background-color: #ffffff;
+    --background-color: rgba(255, 255, 240, 1);
     --text-color: #333333;
     --light-gray: #f5f5f5;
+    --button-color: #013648;
 }
 
 body {
@@ -29,6 +30,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: new-kansas-extra-swash, sans-serif;
     font-weight: 600;
     font-style: italic;
+    color: var(--primary-color);
 }
 
 h1 {
@@ -71,6 +73,13 @@ p, ul {
     font-family: "new-hero", sans-serif;
     font-weight: 800;
     font-style: normal;
+    display: inline-block;
+}
+
+.header-logo {
+    max-height: 80px;
+    width: auto;
+    display: block;
 }
 
 /* Post styles */
@@ -108,7 +117,7 @@ p, ul {
 }
 
 .post-meta {
-    color: #666;
+    color: #013648;
     font-size: 0.8rem;
     font-family: "new-hero", sans-serif;
     font-weight: 800;
@@ -204,7 +213,7 @@ p, ul {
 .category-link {
     display: inline-block;
     padding: 0.3rem .75rem;
-    background-color: var(--primary-color);
+    background-color: var(--button-color);
     color: white;
     text-decoration: none;
     border-radius: 36px;
@@ -217,12 +226,12 @@ p, ul {
 }
 
 .category-link:hover {
-    background-color: #1a2a36; /* Darker shade of primary-color */
+    background-color: #024d65;
     color: white;
 }
 
 .category-link.active {
-    background-color: #131f2c; /* Dark vibrant blue for active state (was green) */
+    background-color: #035f7e;
     color: white;
 }
 
@@ -238,8 +247,8 @@ p, ul {
 .post-category {
     display: inline-block;
     padding: 0.1rem 0.65rem;
-    background-color: var(--light-gray);
-    color: #666;
+    background-color: rgba(1, 54, 72, 0.15);
+    color: #013648;
     text-decoration: none;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -251,7 +260,7 @@ p, ul {
 }
 
 .post-category:hover {
-    background-color: var(--primary-color);
+    background-color: var(--button-color);
     color: white;
 }
 
@@ -287,6 +296,7 @@ p, ul {
     border-radius: 24px;
     overflow: hidden;
     height: 100%;
+    box-shadow: none;
 }
 
 .grid-post-preview:hover {
@@ -341,6 +351,7 @@ p, ul {
     display: block;
     margin: 2rem auto;
     border-radius: 4px;
+    box-shadow: none;
 }
 
 .grid-post-image .featured-image {
@@ -361,7 +372,7 @@ p, ul {
     width: 100%;
     height: auto;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
 }
 
 /* Responsive design */
@@ -468,7 +479,7 @@ p, ul {
 }
 
 .load-more-button {
-    background-color: var(--primary-color);
+    background-color: var(--button-color);
     color: white;
     border: none;
     padding: 0.75rem 2rem;
@@ -482,7 +493,7 @@ p, ul {
 }
 
 .load-more-button:hover {
-    background-color: #1a2a36; /* Darker shade of primary-color */
+    background-color: #024d65;
 }
 
 /* Additional post styles */

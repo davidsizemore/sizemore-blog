@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Art, design, and writing">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ '/assets/favicon/Davey-Picture_0003_sticker06.png' | relative_url }}">
+    <link rel="shortcut icon" type="image/png" href="{{ '/assets/favicon/Davey-Picture_0003_sticker06.png' | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ '/assets/favicon/Davey-Picture_0003_sticker06.png' | relative_url }}">
+    
     <link rel="stylesheet" href="https://use.typekit.net/fcl4zng.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +23,9 @@
 <body class="{% if layout.name == 'grid_category' or page.layout == 'grid_category' %}grid-category{% endif %}">
     <header class="site-header">
         <div class="wrapper">
-            <a class="site-title" href="{{ '/' | relative_url }}">blog.davidsizemoredesign.com</a>
+            <a class="site-title" href="{{ '/' | relative_url }}">
+                <img src="{{ '/assets/favicon/Davey-Picture_0003_sticker06.png' | relative_url }}" alt="David Sizemore Blog" class="header-logo">
+            </a>
         </div>
     </header>
 
