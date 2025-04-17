@@ -1,0 +1,5 @@
+{%- assign random_id = "" | append: page.title | append: "-" | append: forloop.index0 | append: "-" | append: include.content | slugify -%}
+{%- assign sidenote_id = include.id | default: random_id -%}
+{%- assign sidenote_content = include.content | strip -%}
+{%- assign highlight_text = include.text | default: include.content | strip -%}<span class="sidenote-container"><span class="sidenote-text" data-sidenote-id="{{ sidenote_id }}">{{ highlight_text }}</span><span class="sidenote" data-sidenote-id="{{ sidenote_id }}">{{ sidenote_content }}</span></span><!--
+--> 
