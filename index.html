@@ -1,0 +1,58 @@
+---
+layout: default
+title: Home
+pagination:
+  enabled: true
+---
+
+<div class="home">
+  <div class="wrapper">
+    <div class="post-list">
+      {% for post in paginator.posts %}
+        <article class="post-preview">
+          <h2>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h2>
+          <p class="post-meta">
+            {{ post.date | date: "%B %-d, %Y" }}
+            {% if post.categories.size > 0 %}
+              {% for category in post.categories %}
+                <a href="{{ '/category/' | append: category | relative_url }}" class="post-category">{{ category }}</a>
+              {% endfor %}
+            {% endif %}
+          </p>
+          {% if post.feature_image %}
+            <a href="{{ post.url | relative_url }}" class="post-feature-link">
+              <img src="{{ post.feature_image | relative_url }}" alt="{{ post.title }}" class="featured-image">
+            </a>
+          {% endif %}
+          <div class="post-excerpt">
+            {{ post.excerpt }}
+          </div>
+        </article>
+      {% endfor %}
+
+      {% if paginator.total_pages > 1 %}
+        <div class="pagination">
+          {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Previous</a>
+          {% endif %}
+
+          {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+              <span class="current-page">{{ page }}</span>
+            {% elsif page == 1 %}
+              <a href="{{ '/' | relative_url }}">{{ page }}</a>
+            {% else %}
+              <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+            {% endif %}
+          {% endfor %}
+
+          {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div> 
