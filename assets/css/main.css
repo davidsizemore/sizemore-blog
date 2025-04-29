@@ -704,4 +704,17 @@ li {
 .pagination .current-page {
     background-color: var(--primary-color);
     color: white;
+}
+
+/* Link styles */
+a {
+    color: var(--primary-color);
+}
+
+a:visited {
+    color: var(--primary-color);
+}
+
+a:hover {
+    text-decoration: underline;
 } 
